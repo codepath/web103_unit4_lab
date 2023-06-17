@@ -34,16 +34,8 @@ const CreateGift = () => {
     const createGift = (event) => {
         event.preventDefault()
 
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(gift),
-        }
         
-        fetch('/gifts',options)
-        window.location = '/'
+        
     }
 
     return (

@@ -40,27 +40,13 @@ const EditGift = ({data}) => {
     const updateGift = (event) => {
         event.preventDefault()
 
-        const options = {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(gift)
-        }
         
-        fetch(`/gifts/${id}`, options)
-        window.location = '/'
     }
 
     const deleteGift = (event) => {
         event.preventDefault()
 
-        const options = {
-            method: 'DELETE',
-        }
         
-        fetch(`/gifts/${id}`, options)
-        window.location = '/'
     }
 
     return (
