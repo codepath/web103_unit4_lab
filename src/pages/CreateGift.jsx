@@ -11,11 +11,11 @@ const CreateGift = () => {
 
     const [gift, setGift] = useState({
         id: 0, name: '',
-        pricePoint: '',
+        pricepoint: '',
         audience: '',
         image: '',
         description: '',
-        submittedBy: '',
+        submittedby: '',
         submittedOn:
         currentDate
     })
@@ -55,7 +55,7 @@ const CreateGift = () => {
                 <br/>
 
                 <label>Price Point</label><br />
-                <input type='text' id='pricePoint' name='pricePoint' value={gift.pricePoint} onChange={handleChange} /><br />
+                <input type='text' id='pricepoint' name='pricepoint' value={gift.pricepoint} onChange={handleChange} /><br />
                 <br/>
 
                 <label>Audience</label><br />
@@ -63,7 +63,7 @@ const CreateGift = () => {
                 <br/>
 
                 <label>Submitted By</label><br />
-                <input type='text' id='submittedBy' name='submittedBy' value={gift.submittedBy} onChange={handleChange} /><br />
+                <input type='text' id='submittedby' name='submittedby' value={gift.submittedby} onChange={handleChange} /><br />
                 <br/>
 
                 <input type='submit' value='Submit' onClick={createGift} />

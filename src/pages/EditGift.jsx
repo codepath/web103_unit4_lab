@@ -2,18 +2,18 @@ import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import '../css/EditGift.css'
 
-const EditGift = ({data}) => {
+const EditGift = () => {
 
     const { id } = useParams()
     const [gift, setGift] = useState({
         id: 0,
         name: '',
-        pricePoint: '',
+        pricepoint: '',
         audience: '',
         image: '',
         description: '',
-        submittedBy: '', 
-        submittedOn: ''
+        submittedby: '', 
+        submittedon: ''
     })
 
     useEffect(() => {
@@ -21,10 +21,11 @@ const EditGift = ({data}) => {
             const response = await fetch(`/gifts/${id}`)
             const data = await response.json()
             setGift(data)
+            console.log(gift)
         }
 
         fetchGiftById()
-    }, [data, id])
+    }, [id])
 
     const handleChange = (event) => {
         const { name, value } = event.target
@@ -65,15 +66,15 @@ const EditGift = ({data}) => {
                 <br/>
 
                 <label>Price Point</label><br />
-                <input type='text' id='pricePoint' name='pricePoint' value={gift.pricePoint} onChange={handleChange} /><br />
+                <input type='text' id='pricepoint' name='pricepoint' value={gift.pricepoint} onChange={handleChange} /><br />
                 <br/>
 
                 <label>Audience </label><br />
-                <input type="text" id="audience" name="audience" value={gift.audience} onChange={handleChange}/><br />
+                <input type="text" id='audience' name='audience' value={gift.audience} onChange={handleChange}/><br />
                 <br/>
 
                 <label>Submitted By</label><br />
-                <input type='text' id='submittedBy' name='submittedBy' value={gift.submittedBy} onChange={handleChange} /><br />
+                <input type='text' id='submittedby' name='submittedby' value={gift.submittedby} onChange={handleChange} /><br />
                 <br/>
 
                 <input className='submitButton' type='submit' value='Submit' onClick={updateGift} />
