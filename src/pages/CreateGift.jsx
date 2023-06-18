@@ -16,8 +16,7 @@ const CreateGift = () => {
         image: '',
         description: '',
         submittedby: '',
-        submittedOn:
-        currentDate
+        submittedon: currentDate
     })
     
     const handleChange = (event) => {

@@ -21,7 +21,6 @@ const EditGift = () => {
             const response = await fetch(`/gifts/${id}`)
             const data = await response.json()
             setGift(data)
-            console.log(gift)
         }
 
         fetchGiftById()
