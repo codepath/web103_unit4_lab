@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import '../css/EditGift.css'
+import './EditGift.css'
 
 const EditGift = () => {
 
